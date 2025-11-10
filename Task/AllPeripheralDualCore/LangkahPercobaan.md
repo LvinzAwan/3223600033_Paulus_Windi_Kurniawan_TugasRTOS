@@ -24,8 +24,6 @@ Sinkronisasi antar-task dilakukan menggunakan **mutex semaphore**, dan pembagian
 ## Langkah Percobaan
 
 ### 1. Rangkai Komponen
-Hubungkan seluruh komponen sesuai file [`diagram.json`](./diagram.json).  
-
 | Komponen | Pin ESP32-S3 | Keterangan |
 |-----------|---------------|------------|
 | LED | GPIO 5 | Output indikator |
@@ -40,13 +38,11 @@ Hubungkan seluruh komponen sesuai file [`diagram.json`](./diagram.json).
 | Stepper STEP | GPIO 13 | Kontrol langkah |
 | Stepper DIR | GPIO 14 | Arah putaran |
 
-> Pastikan semua GND antar perangkat terhubung ke GND ESP32-S3.  
-
 ---
 
 ### 2. Upload Program
 1. Buka **Arduino IDE** atau **Wokwi Simulator**.  
-2. Masukkan kode dari file [`sketch.ino`](./sketch.ino).  
+2. Masukkan kode dari file skecth.ino.  
 3. Atur baud rate Serial Monitor ke **115200**.  
 4. Jalankan simulasi untuk melihat hasilnya.
 
@@ -82,10 +78,8 @@ BTN:OFF
 Masukkan perintah di Serial Monitor:
 - `servo90` → Menggerakkan servo ke 90°.  
 - `step200` → Stepper maju 200 langkah.  
-- `step-200` → Stepper mundur 200 langkah.  
-
-Stepper diarahkan ulang dengan `setPinsInverted(true, false, false)` agar sesuai arah mekanis simulasi.
-
+- `step-200` → Stepper mundur 200 langkah.
+  
 ---
 
 ## Pembagian Core dan Task
@@ -122,7 +116,6 @@ Contoh hasil saat simulasi berjalan:
 
 **Video Demonstrasi:**  
 https://github.com/user-attachments/assets/7b56dddb-c3a9-4f3f-8d9c-8a3efb4daece
-
 
 
 ---
