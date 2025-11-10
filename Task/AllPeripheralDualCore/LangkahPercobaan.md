@@ -1,4 +1,4 @@
-# Praktikum RTOS: Dual Core ESP32-S3 dengan Multi-Peripheral
+# RTOS: Dual Core ESP32-S3 dengan Multi-Peripheral
 
 ## Deskripsi
 Proyek ini menunjukkan penerapan **sistem RTOS berbasis dual-core** pada mikrokontroler **ESP32-S3**, di mana setiap core menjalankan beberapa task secara paralel.  
@@ -118,9 +118,11 @@ Contoh hasil saat simulasi berjalan:
 ## Dokumentasi
 
 **Tampilan Simulasi Wokwi:**  
-
+<img width="1918" height="868" alt="Gambar All Pheripheral Dual Core" src="https://github.com/user-attachments/assets/36c75339-4008-498a-99b9-59e4c4bf1469" />
 
 **Video Demonstrasi:**  
+https://github.com/user-attachments/assets/7b56dddb-c3a9-4f3f-8d9c-8a3efb4daece
+
 
 
 ---
