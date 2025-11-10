@@ -14,7 +14,7 @@
 
 #### Alat & Simulasi
 
-**Platform:** [Wokwi Simulator – LED Dual Core ESP32](https://wokwi.com/) *(ganti dengan link proyekmu setelah disimpan)*
+**Platform:** [Wokwi Simulator – LED Dual Core ESP32](https://wokwi.com/projects/447221559654506497) 
 **Komponen:**
 
 * ESP32-S3 
