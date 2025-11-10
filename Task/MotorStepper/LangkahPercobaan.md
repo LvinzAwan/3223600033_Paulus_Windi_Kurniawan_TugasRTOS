@@ -1,4 +1,4 @@
-### README – Percobaan Motor Stepper Dual Core ESP32 (Simulasi Wokwi)
+### Percobaan Motor Stepper Dual Core ESP32 (Simulasi Wokwi)
 
 **Judul:** Simulasi Pengendalian Motor Stepper dengan Dual-Core FreeRTOS pada ESP32
 
@@ -64,5 +64,14 @@
 | `-300`   | Motor bergerak -300 langkah ke posisi -50 |
 | `core0`  | Motor task dipindah ke core 0             |
 | `core1`  | Motor task dipindah ke core 1             |
+
+#### Gambar Demo
+<img width="1918" height="863" alt="Gambar Motor Stepper Dual Core" src="https://github.com/user-attachments/assets/54d057d8-8061-4739-b06b-118c43fc3fd4" />
+
+#### Video Demo
+
+
+https://github.com/user-attachments/assets/6beda4ad-59db-40a0-996d-247f1e0859f5
+
 
 ---
