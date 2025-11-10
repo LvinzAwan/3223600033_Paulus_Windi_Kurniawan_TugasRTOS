@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "FoldExz",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-s3-devkitc-1", "id": "esp", "top": -0.18, "left": -5.03, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 177.9,
+      "left": -108.3,
+      "rotate": 270,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.1", "bz1:1", "black", [ "h0" ] ],
+    [ "bz1:2", "esp:14", "red", [ "h9.6", "v-9.2" ] ]
+  ],
+  "dependencies": {}
+}

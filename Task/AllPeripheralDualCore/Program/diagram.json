@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "author": "Paulus Windi Kurniawan",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard-half",
+      "id": "bb1",
+      "top": -60,
+      "left": -300,
+      "attrs": { "color": "#575756" }
+    },
+    {
+      "type": "board-esp32-s3-devkitc-1",
+      "id": "esp",
+      "top": 200,
+      "left": -200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -30,
+      "left": -250,
+      "attrs": { "color": "blue", "flip": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 30,
+      "left": -180,
+      "rotate": 270,
+      "attrs": { "color": "green", "xray": "1", "bounce": "1" }
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": -20,
+      "left": 120,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    { 
+      "type": "wokwi-potentiometer", 
+      "id": "pot1", 
+      "top": -140, 
+      "left": -80, 
+      "attrs": {} 
+    },
+    { 
+      "type": "wokwi-ky-040", 
+      "id": "encoder1", 
+      "top": 140, 
+      "left": 160, 
+      "attrs": {} 
+    },
+    { 
+      "type": "wokwi-servo", 
+      "id": "servo1", 
+      "top": 500, 
+      "left": -180, 
+      "attrs": {} 
+    },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "stepper1",
+      "top": 160,
+      "left": 360,
+      "attrs": { "size": "17" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 50,
+      "left": -260,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -160,
+      "left": -220,
+      "attrs": { "volume": "0.1" }
+    },
+    { 
+      "type": "wokwi-a4988", 
+      "id": "drv1", 
+      "top": 350, 
+      "left": 240, 
+      "attrs": {} 
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    
+    [ "esp:3V3.1", "bb1:bp.1", "red", [ "v0" ] ],
+    [ "esp:GND.1", "bb1:bn.1", "black", [ "v0" ] ],
+    [ "esp:5V", "bb1:tp.1", "red", [ "v0" ] ],
+    [ "bb1:bn.10", "bb1:tn.10", "black", [ "v0" ] ],
+    
+    [ "led1:A", "r1:1", "red", [ "v0" ] ],
+    [ "r1:2", "esp:5", "green", [ "v0" ] ],
+    [ "led1:C", "bb1:tn.5", "black", [ "v0" ] ],
+    
+    [ "btn1:1.l", "esp:6", "blue", [ "v0" ] ],
+    [ "btn1:2.l", "bb1:tn.8", "black", [ "v0" ] ],
+    
+    [ "bz1:1", "esp:7", "orange", [ "v0" ] ],
+    [ "bz1:2", "bb1:tn.12", "black", [ "v0" ] ],
+    
+    [ "pot1:GND", "bb1:tn.15", "black", [ "v0" ] ],
+    [ "pot1:VCC", "bb1:bp.15", "red", [ "v0" ] ],
+    [ "pot1:SIG", "esp:3", "yellow", [ "v0" ] ],
+    
+    [ "oled1:GND", "bb1:tn.25", "black", [ "v0" ] ],
+    [ "oled1:VCC", "bb1:bp.25", "red", [ "v0" ] ],
+    [ "oled1:SCL", "esp:9", "green", [ "v0" ] ],
+    [ "oled1:SDA", "esp:8", "green", [ "v0" ] ],
+    
+    [ "encoder1:GND", "bb1:bn.30", "black", [ "v0" ] ],
+    [ "encoder1:VCC", "bb1:bp.30", "red", [ "v0" ] ],
+    [ "encoder1:CLK", "esp:10", "purple", [ "v0" ] ],
+    [ "encoder1:DT", "esp:11", "purple", [ "v0" ] ],
+    
+    [ "servo1:GND", "bb1:bn.35", "black", [ "v0" ] ],
+    [ "servo1:V+", "bb1:tp.35", "red", [ "v0" ] ],
+    [ "servo1:PWM", "esp:12", "orange", [ "v0" ] ],
+    
+    [ "drv1:VDD", "bb1:bp.40", "red", [ "v0" ] ],
+    [ "drv1:GND.1", "bb1:bn.40", "black", [ "v0" ] ],
+    [ "drv1:VMOT", "bb1:tp.40", "red", [ "v0" ] ],
+    [ "drv1:GND.2", "bb1:bn.41", "black", [ "v0" ] ],
+    
+    [ "drv1:ENABLE", "bb1:bn.42", "black", [ "v0" ] ],
+    [ "drv1:RESET", "bb1:bp.42", "green", [ "v0" ] ],
+    [ "drv1:SLEEP", "bb1:bp.43", "green", [ "v0" ] ],
+    
+    [ "drv1:STEP", "esp:13", "blue", [ "v0" ] ],
+    [ "drv1:DIR", "esp:14", "blue", [ "v0" ] ],
+    
+    [ "drv1:1A", "stepper1:A+", "green", [ "v0" ] ],
+    [ "drv1:1B", "stepper1:A-", "green", [ "v0" ] ],
+    [ "drv1:2A", "stepper1:B+", "green", [ "v0" ] ],
+    [ "drv1:2B", "stepper1:B-", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
