@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "author": "Paulus Windi Kurniawan",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-s3-devkitc-1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-a4988", "id": "drv1", "top": 148.8, "left": 139.2, "attrs": {} },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "stepper1",
+      "top": -53.99,
+      "left": 202.03,
+      "attrs": { "size": "17" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "stepper1:A-", "drv1:2B", "green", [ "v0" ] ],
+    [ "stepper1:A+", "drv1:2A", "green", [ "v57.6", "h-48" ] ],
+    [ "stepper1:B+", "drv1:1A", "green", [ "v0" ] ],
+    [ "stepper1:B-", "drv1:1B", "green", [ "v0" ] ],
+    [ "drv1:VMOT", "esp:5V", "red", [ "h57.75", "v153.68", "h-278.4", "v-76.8" ] ],
+    [ "esp:GND.1", "drv1:GND.1", "black", [ "h-24.28", "v67.02", "h240", "v-9.6" ] ],
+    [ "drv1:VDD", "esp:3V3.2", "green", [ "h48.15", "v115.28", "h-278.4", "v-297.6" ] ],
+    [ "drv1:ENABLE", "esp:GND.3", "black", [ "h-38.4", "v67.2" ] ],
+    [ "drv1:RESET", "esp:3V3.1", "green", [ "h-28.8", "v-211.2", "h-124.8" ] ],
+    [ "drv1:SLEEP", "esp:3V3.1", "green", [ "h-19.2", "v-240", "h-153.6", "v67.2" ] ],
+    [ "drv1:STEP", "esp:13", "green", [ "h-19.2", "v57.6", "h-182.4", "v-96" ] ],
+    [ "drv1:DIR", "esp:12", "green", [ "h-9.6", "v67.2", "h-211.2", "v-96" ] ]
+  ],
+  "dependencies": {}
+}
