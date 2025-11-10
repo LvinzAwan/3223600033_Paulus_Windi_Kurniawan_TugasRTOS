@@ -115,7 +115,9 @@ Contoh hasil saat simulasi berjalan:
 <img width="1918" height="868" alt="Gambar All Pheripheral Dual Core" src="https://github.com/user-attachments/assets/36c75339-4008-498a-99b9-59e4c4bf1469" />
 
 **Video Demonstrasi:**  
-https://github.com/user-attachments/assets/7b56dddb-c3a9-4f3f-8d9c-8a3efb4daece
+
+
+https://github.com/user-attachments/assets/668683c1-3d02-4cb0-b9f9-3235d16ff615
 
 
 ---
