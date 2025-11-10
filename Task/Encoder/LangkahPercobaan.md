@@ -1,5 +1,5 @@
 
-### README – Percobaan Rotary Encoder Dual Core ESP32-S3 (Simulasi Wokwi)
+### Percobaan Rotary Encoder Dual Core ESP32-S3 (Simulasi Wokwi)
 
 **Judul:** Simulasi Pembacaan Rotary Encoder dengan Dual-Core FreeRTOS pada ESP32-S3
 
@@ -59,5 +59,14 @@
 | Putar encoder CCW       | Encoder: -1, -2, -3, ...            |
 | Ketik `reset`           | Encoder direset ke 0                |
 | Ketik `core0` / `core1` | Encoder task dipindah ke core 0 / 1 |
+
+#### Gambar Demo
+<img width="1918" height="863" alt="Gambar Encoder Dual Core" src="https://github.com/user-attachments/assets/9eded6dc-0ca2-473a-9949-6bb594abbe01" />
+
+#### Video Demo
+
+
+https://github.com/user-attachments/assets/9cec8128-de9d-40b3-8c25-8e1b554954eb
+
 
 ---
