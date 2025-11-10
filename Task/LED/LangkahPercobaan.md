@@ -1,5 +1,5 @@
 
-### README – Percobaan LED Dual Core ESP32 (Simulasi Wokwi)
+### Percobaan LED Dual Core ESP32 (Simulasi Wokwi)
 
 **Judul:** Simulasi Pengendalian Tiga LED Menggunakan Dual-Core FreeRTOS pada ESP32-S3
 
@@ -64,5 +64,14 @@
 | Task1 | 0    | 1 detik        | GPIO 4  |
 | Task2 | 1    | 0.7 detik      | GPIO 17 |
 | Task3 | 0    | 0.5 detik      | GPIO 10 |
+
+#### Gambar Demo
+<img width="1918" height="870" alt="Gambar Led Dual Core" src="https://github.com/user-attachments/assets/8ce5f7b4-4057-49a5-885b-87a2227a9bdc" />
+
+#### Video Demo
+
+
+https://github.com/user-attachments/assets/439d91d9-0271-41b4-85ad-a2ebad857fa3
+
 
 ---
