@@ -1,4 +1,4 @@
-### README – Percobaan Servo Dual Core ESP32 (Simulasi Wokwi)
+### Percobaan Servo Dual Core ESP32 (Simulasi Wokwi)
 
 **Judul:** Simulasi Pengendalian Servo Menggunakan Dual-Core FreeRTOS pada ESP32
 
@@ -54,5 +54,12 @@
 | `core0`        | Servo task dipindah ke core 0       |
 | `core1`        | Servo task dipindah ke core 1       |
 | Nilai berulang | Servo bergerak halus ke posisi baru |
+
+#### Gambar Demo 
+<img width="1918" height="868" alt="Gambar Servo Dual Core" src="https://github.com/user-attachments/assets/ecf50e12-a167-4958-a1f7-ac2ff607114e" />
+
+#### Video Demo 
+
+
 
 ---
