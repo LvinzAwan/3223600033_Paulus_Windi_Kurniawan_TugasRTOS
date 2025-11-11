@@ -1,4 +1,4 @@
-# **Percobaan Pengaruh Priority dan Stack Size pada Multi-Tasking FreeRTOS  **
+#**Percobaan Pengaruh Priority dan Stack Size pada Multi-Tasking FreeRTOS**
 
 ---
 
@@ -84,8 +84,21 @@ Masing-masing peripheral dikendalikan oleh satu task independen yang dijalankan 
 ## 📹 **6. Dokumentasi**
 Tiga video hasil percobaan disertakan sebagai bukti:
 1. **Video 1 – Scenario 1:** Semua peripheral berjalan normal dan sinkron.  
+
+
+https://github.com/user-attachments/assets/331d62dc-0e2f-426a-990c-91e56662a946
+
+
 2. **Video 2 – Scenario 2:** Delay muncul akibat prioritas tidak seimbang.  
-3. **Video 3 – Scenario 3:** Sistem tidak stabil akibat stack terlalu kecil.  
+
+
+https://github.com/user-attachments/assets/ebd666ce-2cc0-476e-a866-fa5729a3fbf2
+
+
+3. **Video 3 – Scenario 3:** Sistem tidak stabil akibat stack terlalu kecil.
+
+   
+https://github.com/user-attachments/assets/454c719c-ae25-42fe-8330-31dea1147b90
 
 ---
 
@@ -103,11 +116,8 @@ Tiga video hasil percobaan disertakan sebagai bukti:
 
 ---
 
-### 🔹 **Scenario 2 — Prioritas Campur**
-- OLED mengalami sedikit delay.  
+### 🔹 **Scenario 2 — Prioritas Campur** 
 - Servo kadang tersendat saat buzzer aktif.  
-- Stepper berjalan dengan jeda kecil.  
-- LED tidak berkedip dengan ritme tetap.  
 
 **Kesimpulan:** Task berprioritas tinggi mendominasi waktu CPU → muncul *task preemption*.
 
@@ -116,8 +126,7 @@ Tiga video hasil percobaan disertakan sebagai bukti:
 ### 🔹 **Scenario 3 — Stack Kecil & Prioritas Rendah**
 - OLED tidak tampil (task gagal inisialisasi).  
 - Servo dan stepper tidak bergerak.  
-- LED menyala tidak stabil.  
-- Serial Monitor menampilkan log acak.  
+- Terjadi Stack Overflow yang mengakibatkan crash.  
 
 **Kesimpulan:** Stack kecil dan prioritas rendah menyebabkan *task starvation* dan *crash*.  
 
